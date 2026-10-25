@@ -6,15 +6,9 @@ function BookList() {
   useEffect(() => {
     fetch("http://127.0.0.1:8000/api/books")
       .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-        setBook(data)
-      });
-  
-    
+      .then((data) => setBook(data));
   }, []);
-    
-    
+
   return (
     <>
       <div className="book-list"></div>
@@ -25,8 +19,8 @@ function BookList() {
         books.map((book) => (
           <li key={book.id}>
             <ul>{book.title}</ul>
-            <img src={book.image} alt="book image cover" />
-            <iframe src={book.file}>{book.file}</iframe>
+            <img src={book.image_cover} alt="book image cover" />
+            <iframe src={book.file}>file</iframe>
           </li>
         ))
       )}

@@ -1,5 +1,4 @@
 import BookList from "../api/BookList";
-import "../styles/Home.css";
 
 function Home() {
   return (

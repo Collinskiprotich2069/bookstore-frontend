@@ -1,0 +1,8 @@
+form {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    justify-self: center ;
+    gap:20px;
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "../styles/LoginForm.css";
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,7 @@ function Login() {
     setEror("");
 
     try {
-      const res = await fetch("http://localhost:8000/api/users/", {
+      const res = await fetch("http://localhost:8000/api/author/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -42,6 +42,7 @@ function Login() {
       <p>LOGIN</p>
       <div>
         <form onSubmit={handleLogin}>
+          <label for="username">Username</label>
           <input
             type="text"
             placeholder="Username"
@@ -49,15 +50,15 @@ function Login() {
             onChange={(e) => setUsername(e.target.value)}
             required
           />
+          <label for="password">Password</label>
           <input
             type="password"
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          error && <p>{error}</p>
+
           <button typeof="submit" disabled={loading}>
-            {" "}
-            Login{" "}
+            Login
           </button>
         </form>
       </div>

@@ -2,7 +2,7 @@ function About() {
   return (
     <>
       <div className="about">
-        <h2>This is about Page</h2>
+     <p>We are located in </p>
       </div>
     </>
   );

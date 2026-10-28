@@ -1,6 +1,17 @@
-nav {
-    background-color: #fff;
+* {
+    margin: 0;
 }
-nav li{
-    display: flex;
+nav {
+    background-color: rgb(61, 59, 168);
+  justify-items: center;
+
+}
+nav li {
+        display: flex;
+        padding: 20px;
+}
+
+#nav-links {
+    text-decoration: none;
+    color: #fff;
 }

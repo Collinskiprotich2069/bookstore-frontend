@@ -4,7 +4,7 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState("");
-  const [error, setEror] = useState("");
+  const [setEror] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();

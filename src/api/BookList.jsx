@@ -18,9 +18,16 @@ function BookList() {
       ) : (
         books.map((book) => (
           <li key={book.id}>
-            <ul>{book.title}</ul>
-            <img src={book.image_cover} alt="book image cover" />
-            <iframe src={book.file}>file</iframe>
+            <ul><p>{book.title}</p></ul>
+            <img
+              src={book.image_cover}
+              style={{
+                height: "100px",
+                width: "100px",
+              }}
+              alt="book image cover"
+            />
+            <a href={book.file}>View</a>
           </li>
         ))
       )}
